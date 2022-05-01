@@ -4,6 +4,7 @@ import './App.css'
 import { Footer, Header } from './components/common'
 import { Student} from './features/labs/Students'
 import { StudentModel } from './models/student'
+import { MyText } from './features/labs/MyText'
 // import Header from './components/common/Header'
 // import Footer from './components/common/Footer'
 
@@ -33,6 +34,21 @@ function App() {
           <Student student = {john} onClick={handleStudentClick} />
 
      <Footer />
+
+     <MyText title="12134">Esy Frontend</MyText>
+     <MyText>123</MyText>
+     <MyText>{false}</MyText>
+     <MyText>{undefined}</MyText>
+     <MyText>
+       <span>easy</span>
+     </MyText>
+     <MyText>
+       <span>easy</span> frontend
+     </MyText>
+     <MyText>
+       <span>easy</span> 
+       <span>frontend</span>
+     </MyText>
     </div>
   )
 }
