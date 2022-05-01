@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Footer, Header } from './components/common'
+import { Footer, Header, Widget } from './components/common'
 import { Student} from './features/labs/Students'
 import { StudentModel } from './models/student'
 import { MyText } from './features/labs/MyText'
@@ -49,6 +49,21 @@ function App() {
        <span>easy</span> 
        <span>frontend</span>
      </MyText>
+
+     <div>
+       <div>
+         <Widget title="Earning Overview">Chart 1: Co the goi compent chart o day </Widget>
+       </div>
+       <div>
+         <Widget title="Revenue Sosoucr Overview">Chart 2</Widget>
+       </div>
+       <div>
+         <Widget title="Earning Overview">Chart 3</Widget>
+       </div>
+       <div>
+         <Widget title="Earning Overview">Chart 4</Widget>
+       </div>
+     </div>
     </div>
   )
 }
