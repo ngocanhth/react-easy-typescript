@@ -15,16 +15,22 @@ function App() {
     age: 32,
     gender: "Male",
   }
+
+  function handleStudentClick(student: StudentModel) {
+    console.log("Student Click");
+    console.log(student);
+  }
+
+
   return (
     <div className="App">
-
      <Header />
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
           {/* <Student student = {{name:"Easy frontend", gender: 'male', isHero: true}}/> */}
 
-          <Student student = {john} />
+          <Student student = {john} onClick={handleStudentClick} />
 
      <Footer />
     </div>

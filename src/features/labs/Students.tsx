@@ -17,20 +17,20 @@ import * as React from 'react';
 
 
 export interface StudentProps {
-  student: StudentModel
+  student: StudentModel,
+  onClick?: (student: StudentModel) => void,
 }
 
-export function Student ({student}: StudentProps) {
-  const handleClick = () => {
-    student.name = "Bob";
-    console.log(student);
+export function Student ({student, onClick}: StudentProps) {
 
-    // mutale probs
-    // Not trigger rerender
-    // inconsistent data
+  function handlestudentClick() {
+    onClick?.(student);
   }
   return (
-    <div onClick = {handleClick}>
+   // <div onClick={() => onClick?.(student)}>
+   //    <div onClick={onClick}>
+   
+   <div onClick={handlestudentClick}>
       Students: {student.name}
 
       {student.gender ? 'gender: ' : ''}
