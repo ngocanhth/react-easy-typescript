@@ -1,5 +1,5 @@
+import { StudentModel } from '@/models';
 import * as React from 'react';
-import { StudentModel } from '../../models';
 
 // cach 1:
 
@@ -21,10 +21,18 @@ export interface StudentProps {
 }
 
 export function Student ({student}: StudentProps) {
+  const handleClick = () => {
+    student.name = "Bob";
+    console.log(student);
+
+    // mutale probs
+    // Not trigger rerender
+    // inconsistent data
+  }
   return (
-    <div>
+    <div onClick = {handleClick}>
       Students: {student.name}
-      
+
       {student.gender ? 'gender: ' : ''}
        {student.gender}
     </div>
