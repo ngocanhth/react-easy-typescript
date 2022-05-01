@@ -1,19 +1,10 @@
 import * as React from 'react';
+import { StudentModel } from '../../models';
 
 // cach 1:
 
 
-export interface StudentProps {
-  name: string,
-  gender?: string,
-  isHero?: boolean,
-  hobbyList?: string[],
-  sayHello?: () =>  void,
-}
-
-// cach 2:
-
-// export interface Student {
+// export interface StudentProps {
 //   name: string,
 //   gender?: string,
 //   isHero?: boolean,
@@ -21,29 +12,24 @@ export interface StudentProps {
 //   sayHello?: () =>  void,
 // }
 
-// export interface StudentProps {
-//   student: Student,
-// }
+// cach 2:
 
 
-// export function Student ({student}: StudentProps) {
-//   return (
-//     <div>
-//       Students: {student.name}
-//       Gender: {student.gender}
-//     </div>
-//   );
-// }
 
-export function Student ({name, gender = 'Male', isHero = false, hobbyList=[], sayHello = () => {}}: StudentProps) {
+export interface StudentProps {
+  student: StudentModel
+}
+
+export function Student ({student}: StudentProps) {
   return (
     <div>
-      Students: {name}
-      Gender: {gender}
-
-      {isHero ? 'Hero' : 'No Hero'}
+      Students: {student.name}
+      
+      {student.gender ? 'gender: ' : ''}
+       {student.gender}
     </div>
   );
 }
+
 
 
