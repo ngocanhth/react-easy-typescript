@@ -5,6 +5,7 @@ import { Footer, Header } from './components/common'
 import { Student} from './features/labs/Students'
 import { StudentModel } from './models/student'
 import { MyText } from './features/labs/MyText'
+import { MainLayout } from './FormControls/Layout'
 // import Header from './components/common/Header'
 // import Footer from './components/common/Footer'
 
@@ -25,15 +26,14 @@ function App() {
 
   return (
     <div className="App">
-     <Header />
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+      <MainLayout>
+        <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
           {/* <Student student = {{name:"Easy frontend", gender: 'male', isHero: true}}/> */}
 
           <Student student = {john} onClick={handleStudentClick} />
-
-     <Footer />
+     </MainLayout>
 
      <MyText title="12134">Esy Frontend</MyText>
      <MyText>123</MyText>
