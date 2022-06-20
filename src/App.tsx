@@ -63,6 +63,8 @@ function App() {
        <div>
          <Widget title="Earning Overview">Chart 4</Widget>
        </div>
+       <h3>Merge Array</h3>
+   
      </div>
     </div>
   )
